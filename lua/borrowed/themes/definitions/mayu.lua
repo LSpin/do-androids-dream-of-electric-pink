@@ -18,8 +18,9 @@ local pal = {
   whisper  = "#eba4ac", -- pink
   shy      = "#3e8fb0", -- green
   extra    = "#9ccfd8", -- breeze
-  hotpink  = "#ff69b4", -- hot pink
+  hotpink   = "#ff69b4", -- hot pink
   lightpink = "#ffb6c1", -- light pink
+  brightpink = "#ffc8d3", -- slightly brighter than light pink
 }
 
 -- stylua: ignore
@@ -34,16 +35,16 @@ local spec = {
     dep         = "muted",
     field       = "speak",
     func        = "lightpink",
-    ident       = "whisper",
+    ident       = "brightpink",
     keyword     = "shy",
     number      = "yell",
     operator    = "subtle",
     preproc     = "plain",
     regex       = "shy",
     statement   = "shy",
-    string      = "shy",
+    string      = "hotpink",
     type        = "speak",
-    variable    = "whisper",
+    variable    = "brightpink",
   },
 
   diag = {
