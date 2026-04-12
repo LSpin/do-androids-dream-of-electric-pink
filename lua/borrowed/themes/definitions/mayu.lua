@@ -7,50 +7,57 @@ local meta = {
 ---@type ThemePalette
 local pal = {
   -- Backgrounds
-  mattress   = "#000000",  -- pure black
-  sheet      = "#000000",  -- editor background
-  blanket    = "#110008",  -- barely-visible selection / highlight background
+  mattress  = "#000000",  -- pure black
+  sheet     = "#000000",  -- editor background
+  blanket   = "#140020",  -- deep purple-tinted selection highlight
 
-  -- Five luminance tiers (WCAG 3 / APCA on black)
-  -- Each tier is clearly distinct in perceived brightness for colorblind users
-  plain      = "#ffe0ee",  -- Tier 1 (Lc ~92): primary text — very pale pink
-  lightpink  = "#ff99cc",  -- Tier 2 (Lc ~72): functions, fields
-  hotpink    = "#ff6699",  -- Tier 3 (Lc ~58): strings, types, regex
-  vivid      = "#c084e0",  -- Tier 4 (Lc ~58): keywords, numbers (+ bold) — lilac
-  subtle     = "#aa3366",  -- Tier 5a (Lc ~35): operators, brackets
-  muted      = "#ffffff",  -- comments (+ italic) — white
+  -- Pink family — data, values, text (warm)
+  blush     = "#ffe8f0",  -- Lc ~93: normal text, variables, identifiers
+  pink      = "#ffaacc",  -- Lc ~76: functions, fields
+  hotpink   = "#ff77bb",  -- Lc ~63: strings, numbers, regex
+  rosepink  = "#ff4499",  -- Lc ~50: constants, builtins
+
+  -- Lilac / purple family — structure, control flow (cool)
+  lavender  = "#ddb8ff",  -- Lc ~72: types, preprocessor
+  lilac     = "#bb88ff",  -- Lc ~58: keywords
+  purple    = "#9944dd",  -- Lc ~44: conditionals, statements
+  dimpurple = "#7733aa",  -- Lc ~33: operators, brackets
+
+  -- Neutrals
+  white     = "#ffffff",  -- comments (italic)
+  muted     = "#7a4455",  -- deprecated, ignored
 }
 
 -- stylua: ignore
 ---@type ThemeSpec
 local spec = {
   syntax = {
-    bracket     = "subtle",
-    builtin     = "vivid",
-    comment     = "muted",
-    conditional = "vivid",
-    const       = "vivid",
+    bracket     = "dimpurple",
+    builtin     = "rosepink",
+    comment     = "white",
+    conditional = "purple",
+    const       = "rosepink",
     dep         = "muted",
-    field       = "lightpink",
-    func        = "lightpink",
-    ident       = "plain",
-    keyword     = "vivid",
-    number      = "vivid",
-    operator    = "subtle",
-    preproc     = "plain",
+    field       = "pink",
+    func        = "pink",
+    ident       = "blush",
+    keyword     = "lilac",
+    number      = "hotpink",
+    operator    = "dimpurple",
+    preproc     = "lavender",
     regex       = "hotpink",
-    statement   = "vivid",
+    statement   = "purple",
     string      = "hotpink",
-    type        = "hotpink",
-    variable    = "plain",
+    type        = "lavender",
+    variable    = "blush",
   },
 
   diag = {
-    error = "vivid",
+    error = "rosepink",
     warn  = "hotpink",
-    hint  = "lightpink",
-    info  = "plain",
-    ok    = "lightpink",
+    hint  = "lilac",
+    info  = "lavender",
+    ok    = "pink",
   },
 
   diag_bg = {
@@ -62,23 +69,23 @@ local spec = {
   },
 
   diff = {
-    add      = "lightpink",
-    removed  = "vivid",
+    add      = "pink",
+    removed  = "rosepink",
     changed  = "hotpink",
-    conflict = "vivid",
+    conflict = "rosepink",
     ignored  = "muted",
   },
 
   cursor = {
     fg = "mattress",
-    bg = "#ff99cc",
+    bg = "#ffaacc",
   },
 
   visual = {
     fg        = "mattress",
-    bg        = "hotpink",
+    bg        = "lilac",
     cursor_fg = "mattress",
-    cursor_bg = "vivid",
+    cursor_bg = "purple",
   },
 }
 
