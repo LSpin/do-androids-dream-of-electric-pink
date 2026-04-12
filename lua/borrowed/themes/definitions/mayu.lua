@@ -32,7 +32,7 @@ local pal = {
 ---@type ThemeSpec
 local spec = {
   syntax = {
-    bracket     = "dimpurple",
+    bracket     = "lavender",
     builtin     = "rosepink",
     comment     = "white",
     conditional = "purple",
