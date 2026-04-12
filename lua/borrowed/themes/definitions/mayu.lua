@@ -4,55 +4,58 @@ local meta = {
 }
 
 -- stylua: ignore
----@type ThemePalette   
+---@type ThemePalette
 local pal = {
-  mattress = "#000000",
-  sheet    = "#121212",
-  blanket  = "#26233a",
-  muted    = "#6e6a86",
-  subtle   = "#908caa",
+  -- Backgrounds (dark, slight pink tint)
+  mattress   = "#0d0008",  -- near-black base
+  sheet      = "#1a000f",  -- editor background
+  blanket    = "#2e0020",  -- highlight / selection background
 
-  plain    = "#ffffff", -- white
-  yell     = "#eb6f92", -- red
-  speak    = "#f6c177", -- yellow
-  whisper  = "#eba4ac", -- pink
-  shy      = "#3e8fb0", -- green
-  extra    = "#9ccfd8", -- breeze
-  hotpink   = "#ff69b4", -- hot pink
-  lightpink = "#ffb6c1", -- light pink
-  brightpink = "#ffc8d3", -- slightly brighter than light pink
+  -- Muted tones (de-emphasized UI elements)
+  muted      = "#8b4f6b",  -- least important (deprecated, ignored)
+  subtle     = "#b06090",  -- secondary (operators, brackets, line numbers)
+
+  -- Pink spectrum (syntax)
+  plain      = "#ffffff",  -- white (comments)
+  blush      = "#ffd6e8",  -- soft blush (fields)
+  brightpink = "#ffc8d3",  -- bright pink (variables, identifiers)
+  lightpink  = "#ffb6c1",  -- light pink (functions)
+  rose       = "#ff85c2",  -- rose (types, preproc)
+  hotpink    = "#ff69b4",  -- hot pink (normal text, strings)
+  vivid      = "#ff3399",  -- vivid pink (numbers, constants, builtins)
+  neon       = "#ff0080",  -- neon magenta (keywords, conditionals)
 }
 
 -- stylua: ignore
----@type ThemeSpec   
+---@type ThemeSpec
 local spec = {
   syntax = {
     bracket     = "subtle",
-    builtin     = "yell",
+    builtin     = "vivid",
     comment     = "plain",
-    conditional = "shy",
-    const       = "yell",
+    conditional = "neon",
+    const       = "vivid",
     dep         = "muted",
-    field       = "speak",
+    field       = "blush",
     func        = "lightpink",
     ident       = "brightpink",
-    keyword     = "shy",
-    number      = "yell",
+    keyword     = "neon",
+    number      = "vivid",
     operator    = "subtle",
-    preproc     = "plain",
-    regex       = "shy",
-    statement   = "shy",
+    preproc     = "rose",
+    regex       = "hotpink",
+    statement   = "neon",
     string      = "hotpink",
-    type        = "speak",
+    type        = "rose",
     variable    = "brightpink",
   },
 
   diag = {
-    error = "yell",
-    warn  = "speak",
-    hint  = "extra",
-    info  = "shy",
-    ok    = "extra",
+    error = "neon",
+    warn  = "vivid",
+    hint  = "rose",
+    info  = "lightpink",
+    ok    = "blush",
   },
 
   diag_bg = {
@@ -64,23 +67,23 @@ local spec = {
   },
 
   diff = {
-    add      = "shy",
-    removed  = "yell",
-    changed  = "speak",
-    conflict = "yell",
+    add      = "lightpink",
+    removed  = "neon",
+    changed  = "vivid",
+    conflict = "neon",
     ignored  = "muted",
   },
 
   cursor = {
     fg = "mattress",
-    bg = "#f5dcd8",
+    bg = "#ff85c2",
   },
 
   visual = {
     fg        = "mattress",
-    bg        = "speak",
+    bg        = "vivid",
     cursor_fg = "mattress",
-    cursor_bg = "yell",
+    cursor_bg = "neon",
   },
 }
 
