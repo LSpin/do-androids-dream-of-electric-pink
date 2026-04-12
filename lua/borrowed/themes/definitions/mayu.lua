@@ -16,9 +16,9 @@ local pal = {
   plain      = "#ffe0ee",  -- Tier 1 (Lc ~92): primary text — very pale pink
   lightpink  = "#ff99cc",  -- Tier 2 (Lc ~72): functions, fields
   hotpink    = "#ff6699",  -- Tier 3 (Lc ~58): strings, types, regex
-  vivid      = "#e8006b",  -- Tier 4 (Lc ~42): keywords, numbers (+ bold)
+  vivid      = "#c084e0",  -- Tier 4 (Lc ~58): keywords, numbers (+ bold) — lilac
   subtle     = "#aa3366",  -- Tier 5a (Lc ~35): operators, brackets
-  muted      = "#773355",  -- Tier 5b (Lc ~27): comments (+ italic), deprecated
+  muted      = "#ffffff",  -- comments (+ italic) — white
 }
 
 -- stylua: ignore
