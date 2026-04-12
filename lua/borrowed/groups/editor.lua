@@ -43,8 +43,8 @@ function M.get(pal, spec)
     ModeMsg          = { fg = pal.plain, style = "bold" }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MoreMsg          = { fg = pal.plain }, -- |more-prompt|
     NonText          = { fg = pal.blanket }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    Normal           = { fg = pal.plain, bg = trans and "NONE" or pal.mattress }, -- normal text
-    NormalNC         = { fg = pal.plain, bg = (inactive and pal.sheet) or (trans and "NONE") or pal.mattress  }, -- normal text in non-current windows
+    Normal           = { fg = pal.hotpink, bg = trans and "NONE" or pal.mattress }, -- normal text
+    NormalNC         = { fg = pal.hotpink, bg = (inactive and pal.sheet) or (trans and "NONE") or pal.mattress  }, -- normal text in non-current windows
     NormalFloat      = { link = "Normal" }, -- Normal text in floating windows.
     FloatBorder      = { fg = pal.whisper }, -- Color of floating windows, such as hover docs
     Pmenu            = { fg = pal.subtle }, -- Popup menu: normal item.

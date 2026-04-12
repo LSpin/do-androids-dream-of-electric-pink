@@ -12,12 +12,14 @@ local pal = {
   muted    = "#6e6a86",
   subtle   = "#908caa",
 
-  plain    = "#e0def4", -- white
+  plain    = "#ffffff", -- white
   yell     = "#eb6f92", -- red
   speak    = "#f6c177", -- yellow
   whisper  = "#eba4ac", -- pink
   shy      = "#3e8fb0", -- green
   extra    = "#9ccfd8", -- breeze
+  hotpink  = "#ff69b4", -- hot pink
+  lightpink = "#ffb6c1", -- light pink
 }
 
 -- stylua: ignore
@@ -26,12 +28,12 @@ local spec = {
   syntax = {
     bracket     = "subtle",
     builtin     = "yell",
-    comment     = "muted",
+    comment     = "plain",
     conditional = "shy",
     const       = "yell",
     dep         = "muted",
     field       = "speak",
-    func        = "plain",
+    func        = "lightpink",
     ident       = "whisper",
     keyword     = "shy",
     number      = "yell",
