@@ -6,24 +6,19 @@ local meta = {
 -- stylua: ignore
 ---@type ThemePalette
 local pal = {
-  -- Backgrounds (pure black)
-  mattress   = "#000000",  -- pure black base
+  -- Backgrounds
+  mattress   = "#000000",  -- pure black
   sheet      = "#000000",  -- editor background
-  blanket    = "#0d0d0d",  -- highlight / selection background
+  blanket    = "#110008",  -- barely-visible selection / highlight background
 
-  -- Muted tones (de-emphasized UI elements)
-  muted      = "#8b4f6b",  -- least important (deprecated, ignored)
-  subtle     = "#b06090",  -- secondary (operators, brackets, line numbers)
-
-  -- Pink spectrum (syntax)
-  plain      = "#ffffff",  -- white (comments)
-  blush      = "#ffd6e8",  -- soft blush (fields)
-  brightpink = "#ffc8d3",  -- bright pink (variables, identifiers)
-  lightpink  = "#ffb6c1",  -- light pink (functions)
-  rose       = "#ff85c2",  -- rose (types, preproc)
-  hotpink    = "#ff69b4",  -- hot pink (normal text, strings)
-  vivid      = "#ff3399",  -- vivid pink (numbers, constants, builtins)
-  neon       = "#ff0080",  -- neon magenta (keywords, conditionals)
+  -- Five luminance tiers (WCAG 3 / APCA on black)
+  -- Each tier is clearly distinct in perceived brightness for colorblind users
+  plain      = "#ffe0ee",  -- Tier 1 (Lc ~92): primary text — very pale pink
+  lightpink  = "#ff99cc",  -- Tier 2 (Lc ~72): functions, fields
+  hotpink    = "#ff6699",  -- Tier 3 (Lc ~58): strings, types, regex
+  vivid      = "#e8006b",  -- Tier 4 (Lc ~42): keywords, numbers (+ bold)
+  subtle     = "#aa3366",  -- Tier 5a (Lc ~35): operators, brackets
+  muted      = "#773355",  -- Tier 5b (Lc ~27): comments (+ italic), deprecated
 }
 
 -- stylua: ignore
@@ -32,30 +27,30 @@ local spec = {
   syntax = {
     bracket     = "subtle",
     builtin     = "vivid",
-    comment     = "plain",
-    conditional = "neon",
+    comment     = "muted",
+    conditional = "vivid",
     const       = "vivid",
     dep         = "muted",
-    field       = "blush",
+    field       = "lightpink",
     func        = "lightpink",
-    ident       = "brightpink",
-    keyword     = "neon",
+    ident       = "plain",
+    keyword     = "vivid",
     number      = "vivid",
     operator    = "subtle",
-    preproc     = "rose",
+    preproc     = "plain",
     regex       = "hotpink",
-    statement   = "neon",
+    statement   = "vivid",
     string      = "hotpink",
-    type        = "rose",
-    variable    = "brightpink",
+    type        = "hotpink",
+    variable    = "plain",
   },
 
   diag = {
-    error = "neon",
-    warn  = "vivid",
-    hint  = "rose",
-    info  = "lightpink",
-    ok    = "blush",
+    error = "vivid",
+    warn  = "hotpink",
+    hint  = "lightpink",
+    info  = "plain",
+    ok    = "lightpink",
   },
 
   diag_bg = {
@@ -68,22 +63,22 @@ local spec = {
 
   diff = {
     add      = "lightpink",
-    removed  = "neon",
-    changed  = "vivid",
-    conflict = "neon",
+    removed  = "vivid",
+    changed  = "hotpink",
+    conflict = "vivid",
     ignored  = "muted",
   },
 
   cursor = {
     fg = "mattress",
-    bg = "#ff85c2",
+    bg = "#ff99cc",
   },
 
   visual = {
     fg        = "mattress",
-    bg        = "vivid",
+    bg        = "hotpink",
     cursor_fg = "mattress",
-    cursor_bg = "neon",
+    cursor_bg = "vivid",
   },
 }
 
