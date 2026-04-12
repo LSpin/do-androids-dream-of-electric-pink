@@ -6,10 +6,10 @@ local meta = {
 -- stylua: ignore
 ---@type ThemePalette
 local pal = {
-  -- Backgrounds (dark, slight pink tint)
-  mattress   = "#0d0008",  -- near-black base
-  sheet      = "#1a000f",  -- editor background
-  blanket    = "#2e0020",  -- highlight / selection background
+  -- Backgrounds (pure black)
+  mattress   = "#000000",  -- pure black base
+  sheet      = "#000000",  -- editor background
+  blanket    = "#0d0d0d",  -- highlight / selection background
 
   -- Muted tones (de-emphasized UI elements)
   muted      = "#8b4f6b",  -- least important (deprecated, ignored)
