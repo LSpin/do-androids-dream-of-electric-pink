@@ -17,11 +17,11 @@ local pal = {
   hotpink   = "#ff77bb",  -- Lc ~63: strings, numbers, regex
   rosepink  = "#ff4499",  -- Lc ~50: constants, builtins
 
-  -- Lilac / purple family — structure, control flow (cool)
-  lavender  = "#ddb8ff",  -- Lc ~72: types, preprocessor
-  lilac     = "#bb88ff",  -- Lc ~58: keywords
-  purple    = "#9944dd",  -- Lc ~44: conditionals, statements
-  dimpurple = "#7733aa",  -- Lc ~33: operators, brackets
+  -- Lilac / purple family — structure, control flow (pink-purple/magenta)
+  lavender  = "#f0b8ff",  -- Lc ~74: types, preprocessor
+  lilac     = "#e088ee",  -- Lc ~60: keywords
+  purple    = "#cc44cc",  -- Lc ~42: conditionals, statements
+  dimpurple = "#993399",  -- Lc ~30: operators, brackets
 
   -- Neutrals
   white     = "#ffffff",  -- comments (italic)
