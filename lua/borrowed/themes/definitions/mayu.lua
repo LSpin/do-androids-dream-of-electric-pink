@@ -12,7 +12,7 @@ local pal = {
   blanket   = "#140020",  -- deep purple-tinted selection highlight
 
   -- Pink family — data, values, text (warm)
-  blush     = "#ffe8f0",  -- Lc ~93: normal text, variables, identifiers
+  blush     = "#f0f0f0",  -- Lc ~94: normal text, variables, identifiers (neutral off-white)
   pink      = "#ffaacc",  -- Lc ~76: functions, fields
   hotpink   = "#ff77bb",  -- Lc ~63: strings, numbers, regex
   rosepink  = "#ff4499",  -- Lc ~50: constants, builtins
